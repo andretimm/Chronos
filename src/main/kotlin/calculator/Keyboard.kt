@@ -116,7 +116,7 @@ fun CalculatorApp() {
 
     fun onButtonClick(button: String) {
         when (button) {
-            "=" ->
+            "=" -> {
                 lastValue?.let { (hours, minutes) ->
                     when (lastOperation) {
                         "+" -> {
