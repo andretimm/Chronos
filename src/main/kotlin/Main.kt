@@ -1,31 +1,18 @@
-import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
+import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
-
-@Composable
-@Preview
-fun App() {
-    var text by remember { mutableStateOf("Hello, World!") }
-
-    MaterialTheme {
-        Button(onClick = {
-            text = "Hello, Desktop!"
-        }) {
-            Text(text)
-        }
-    }
-}
+import calculator.CalculatorApp
 
 fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
-        App()
+    Window(
+        onCloseRequest = ::exitApplication,
+        resizable = false,
+        title = "Calculadora de horas",
+        state = WindowState(width = 300.dp, height = 475.dp),
+        icon = painterResource("icon.png")
+    ) {
+        CalculatorApp()
     }
 }
