@@ -10,7 +10,7 @@ fun main() = application {
         onCloseRequest = ::exitApplication,
         resizable = false,
         title = "Calculadora de horas",
-        state = WindowState(width = 300.dp, height = 475.dp),
+        state = WindowState(width = 300.dp, height = 575.dp),
         icon = painterResource("icon.png")
     ) {
         CalculatorApp()
