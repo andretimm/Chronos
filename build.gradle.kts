@@ -39,8 +39,8 @@ compose.desktop {
             linux {
                 iconFile.set(project.file("icon.png"))
             }
-            packageName = "chronos"
-            packageVersion = "1.0.0"
+            packageName = "Chronos"
+            packageVersion = "1.0.1"
         }
     }
 }
